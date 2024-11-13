@@ -1,0 +1,67 @@
+/* Centering the body content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    background: linear-gradient(90deg, rgb(255, 15, 15) 0%, rgb(255, 71, 145) 100%);
+}
+
+/* General text styles */
+p {
+    font-family: 'Lucida Handwriting', cursive;
+    color: black;
+    animation: bounce 5s infinite;
+}
+
+#timer {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#countdown {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 40px;
+    padding-top: 140px;
+    color: black;
+    animation: bounce 5s infinite;
+}
+
+/* Countdown time units */
+#days, #hours, #minutes, #seconds {
+    color: #015201; /* Common color for time units */
+}
+
+/* Image lineup styles */
+.image-lineup { 
+    display: flex;
+    align-items: center; /* Adjust vertical alignment */
+    position: relative;
+}
+
+.image-lineup img { 
+    object-fit: cover; /* Keep image aspect ratio */
+}
+
+/* Fixed position for bottom elements */
+.bottom-lineup { 
+    position: fixed; /* Positions at the bottom */ 
+    bottom: 10px;
+}
+
+/* Keyframes for animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fallAndSpin {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(500px) rotate(360deg); }
+}
+
+/* Apply the falling and spinning animation to snowflakes */
+.snowflake {
+    animation: fallAndSpin 10s linear infinite;
+}
